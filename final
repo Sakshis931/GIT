@@ -1,0 +1,128 @@
+Last login: Mon May 19 10:39:24 on ttys000
+(base) sakshisingh@Sakshis-MacBook-Air ~ % pwd
+/Users/sakshisingh
+(base) sakshisingh@Sakshis-MacBook-Air ~ % mkdir projectt
+(base) sakshisingh@Sakshis-MacBook-Air ~ % cd projectt
+(base) sakshisingh@Sakshis-MacBook-Air projectt % ls
+(base) sakshisingh@Sakshis-MacBook-Air projectt % mkdir project
+(base) sakshisingh@Sakshis-MacBook-Air projectt % ls
+project
+(base) sakshisingh@Sakshis-MacBook-Air projectt % nano demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air projectt % cat demo1.txt
+cat: demo1.txt: No such file or directory
+(base) sakshisingh@Sakshis-MacBook-Air projectt % cd project
+(base) sakshisingh@Sakshis-MacBook-Air project % ls
+(base) sakshisingh@Sakshis-MacBook-Air project % touch demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air project % nano demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air project % cat demo1.txt
+abcdefgh
+(base) sakshisingh@Sakshis-MacBook-Air project % git add demo1.txt
+fatal: not a git repository (or any of the parent directories): .git
+(base) sakshisingh@Sakshis-MacBook-Air project % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/sakshisingh/projectt/project/.git/
+(base) sakshisingh@Sakshis-MacBook-Air project % git add demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air project % git commit -m "Sakshi"
+[master (root-commit) 317ab26] Sakshi
+ Committer: Sakshi Singh <sakshisingh@Sakshis-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air project % git log               
+commit 317ab2661686840002b8dacfdd91953c5b6a02d1 (HEAD -> master)
+Author: Sakshi Singh <sakshisingh@Sakshis-MacBook-Air.local>
+Date:   Mon May 19 10:59:56 2025 +0530
+
+    Sakshi
+(base) sakshisingh@Sakshis-MacBook-Air project % cat demo1.txt
+abcdefgh
+(base) sakshisingh@Sakshis-MacBook-Air project % nano demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air project % git add demo1.txt
+(base) sakshisingh@Sakshis-MacBook-Air project % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   demo1.txt
+
+(base) sakshisingh@Sakshis-MacBook-Air project % git status                   
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   demo1.txt
+
+(base) sakshisingh@Sakshis-MacBook-Air project % git commit -m "second commit"
+[master 0c8753b] second commit
+ Committer: Sakshi Singh <sakshisingh@Sakshis-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(base) sakshisingh@Sakshis-MacBook-Air project % git log
+commit 0c8753b3ad2607167ae58f1823c120b0de2839d1 (HEAD -> master)
+Author: Sakshi Singh <sakshisingh@Sakshis-MacBook-Air.local>
+Date:   Mon May 19 11:06:01 2025 +0530
+
+    second commit
+
+commit 317ab2661686840002b8dacfdd91953c5b6a02d1
+Author: Sakshi Singh <sakshisingh@Sakshis-MacBook-Air.local>
+Date:   Mon May 19 10:59:56 2025 +0530
+
+    Sakshi
+(base) sakshisingh@Sakshis-MacBook-Air project % git checkout 317ab2661686840002b8dacfdd91953c5b6a02d1
+Note: switching to '317ab2661686840002b8dacfdd91953c5b6a02d1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 317ab26 Sakshi
+(base) sakshisingh@Sakshis-MacBook-Air project % git remote add origin https://github.com/Sakshis931/GIT.git
+(base) sakshisingh@Sakshis-MacBook-Air project % git push origin 
+fatal: You are not currently on a branch.
+To push the history leading to the current (detached HEAD)
+state now, use
+
+    git push origin HEAD:<name-of-remote-branch>
+
+(base) sakshisingh@Sakshis-MacBook-Air project %      
